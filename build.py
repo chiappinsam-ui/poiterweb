@@ -15,7 +15,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%23B0431F'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Arial,Helvetica,sans-serif' font-weight='800' fill='%23ffffff' text-anchor='middle'%3ESG%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%23B8281A'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Arial,Helvetica,sans-serif' font-weight='800' fill='%23ffffff' text-anchor='middle'%3ESG%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -93,11 +93,9 @@ FOOTER = f"""<footer>
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="services.html">Stamped &amp; Decorative</a></li>
-          <li><a href="services.html">Custom Driveways</a></li>
-          <li><a href="services.html">Patios &amp; Outdoor Living</a></li>
-          <li><a href="services.html">Pool Decks</a></li>
-          <li><a href="services.html">Foundations &amp; Commercial</a></li>
+          <li><a href="services.html">Footpaths &amp; Decorative</a></li>
+          <li><a href="services.html">Driveways</a></li>
+          <li><a href="services.html">Shed Slabs</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -151,7 +149,7 @@ def banner(crumb, h1, p, imgfile="concrete19.jpg"):
 def cta(eyebrow, title, primary_label, secondary_href, secondary_label):
     return f"""  <section class="cta-banner">
     <div class="cta-bg">
-      {img("concrete15.jpg", 1920, 1200, "CTA banner — dusk shot of finished driveway", "Finished stamped concrete driveway at dusk")}
+      {img("concrete15.jpg", 1920, 1200, "CTA banner — dusk shot of finished slab", "Finished concrete slab at dusk")}
     </div>
     <div class="container cta-content reveal">
       <div class="eyebrow">{eyebrow}</div>
@@ -199,12 +197,12 @@ index_body = f"""<main id="main">
 
   <section class="hero">
     <div class="hero-bg">
-      {img("concrete.jpg", 1920, 1080, "Hero — luxury stamped concrete patio, wide shot", "Luxury stamped concrete patio by St George Concrete Solutions")}
+      {img("concrete.jpg", 1920, 1080, "Hero — exposed aggregate driveway, wide shot", "Exposed aggregate driveway by St George Concrete Solutions")}
     </div>
     <div class="container hero-inner">
       <div class="eyebrow">Adelaide, South Australia · Licensed &amp; Insured · Est. 2009</div>
       <h1>Poured to last.<br><em>Finished to impress.</em></h1>
-      <p class="lead">St George Concrete Solutions designs and hand-finishes driveways, patios, pool decks and foundations across Adelaide and the Adelaide Hills — engineered for our reactive clay soils, built to outlast them.</p>
+      <p class="lead">St George Concrete Solutions pours and hand-finishes footpaths, driveways and shed slabs across Adelaide and the Adelaide Hills — engineered for our reactive clay soils, built to outlast them.</p>
       <div class="hero-cta">
         <a href="contact.html" class="btn btn-solid"><span>Get a Free Estimate</span>{ARROW}</a>
         <a href="gallery.html" class="btn btn-outline"><span>See Our Work</span>{ARROW}</a>
@@ -213,7 +211,7 @@ index_body = f"""<main id="main">
         <div class="cell"><b>15+</b><span>Years in Adelaide</span></div>
         <div class="cell"><b>800+</b><span>Projects poured</span></div>
         <div class="cell"><b>4.9★</b><span>Average rating</span></div>
-        <div class="cell"><b>BLD-204871</b><span>Licensed &amp; insured</span></div>
+        <div class="cell"><b>Licensed</b><span>&amp; fully insured</span></div>
       </div>
     </div>
   </section>
@@ -223,15 +221,15 @@ index_body = f"""<main id="main">
       <div class="section-head center reveal">
         <div class="eyebrow">What we build</div>
         <h2 class="section-title">Concrete services, <em>elevated.</em></h2>
-        <p class="section-sub">From a quiet backyard patio to a full commercial foundation — every project gets the same obsessive finish work.</p>
+        <p class="section-sub">Footpaths, driveways and shed slabs — every project gets the same obsessive finish work.</p>
       </div>
       <div class="services-grid">
-{service_card("concrete3.jpg", "Decorative", "Stamped &amp; Decorative", "Slate, cobblestone and wood-plank textures with hand-applied stains — no two patios look alike.", delay="d1")}
-{service_card("concrete4.jpg", "Driveways", "Custom Driveways", "Exposed aggregate, broom-finish or stamped borders, engineered for Adelaide's heat cycles.", delay="d2")}
-{service_card("concrete5.jpg", "Outdoor living", "Patios &amp; Outdoor Living", "Full outdoor rooms — fire features, seat walls and kitchens poured to match your home.", delay="d3")}
+{service_card("concrete6.jpg", "Footpaths", "Footpaths &amp; Decorative", "Exposed aggregate, coloured or plain broom-finish footpaths and crossovers — decorative options if you want them.", delay="d1")}
+{service_card("concrete4.jpg", "Driveways", "Driveways", "Exposed aggregate, broom-finish or coloured driveways, engineered for Adelaide's heat cycles and clay soils.", delay="d2")}
+{service_card("concrete10.jpg", "Shed Slabs", "Shed Slabs", "Reinforced, level slabs sized to your shed or carport kit — screeded flat and finished to last.", delay="d3")}
       </div>
       <div style="text-align:center; margin-top:52px;">
-        <a href="services.html" class="btn btn-outline"><span>View All Six Services</span>{ARROW}</a>
+        <a href="services.html" class="btn btn-outline"><span>View All Services</span>{ARROW}</a>
       </div>
     </div>
   </section>
@@ -240,7 +238,7 @@ index_body = f"""<main id="main">
     <div class="container about-grid">
       <div class="about-media reveal-left">
         <div class="img-wrap">
-          {img("concrete2.jpg", 900, 1125, "About — crew finishing a stamped concrete slab", "St George Concrete Solutions crew hand-finishing a stamped slab")}
+          {img("concrete2.jpg", 900, 1125, "About — crew finishing a driveway pour", "St George Concrete Solutions crew hand-finishing a driveway pour")}
         </div>
         <div class="about-badge"><span>EST.</span><b>2009</b><span>SA</span></div>
       </div>
@@ -272,27 +270,18 @@ index_body = f"""<main id="main">
     </div>
   </section>
 
-  <section class="stats-band">
-    <div class="container stats-grid">
-      <div class="stat-card reveal"><div class="stat-num"><span class="count" data-target="15">0</span><span class="suffix">+</span></div><div class="stat-label">Years of excellence</div></div>
-      <div class="stat-card reveal d1"><div class="stat-num"><span class="count" data-target="812">0</span><span class="suffix">+</span></div><div class="stat-label">Projects delivered</div></div>
-      <div class="stat-card reveal d2"><div class="stat-num"><span class="count" data-target="100">0</span><span class="suffix">%</span></div><div class="stat-label">Licensed &amp; insured</div></div>
-      <div class="stat-card reveal d3"><div class="stat-num"><span class="count" data-target="49" data-decimal="1">0</span><span class="suffix">★</span></div><div class="stat-label">Average client rating</div></div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
       <div class="section-head center reveal">
         <div class="eyebrow">Recent work</div>
         <h2 class="section-title">A portfolio worth <em>standing on.</em></h2>
-        <p class="section-sub">A small sample of driveways, patios and decorative work completed across Greater Adelaide.</p>
+        <p class="section-sub">A small sample of footpaths, driveways and shed slabs completed across Greater Adelaide.</p>
       </div>
       <div class="gallery-grid g-4 reveal">
-{gallery_item("concrete9.jpg", 800, 1000, "driveways", "Driveways", "Belair Hills Estate", href="gallery.html")}
-{gallery_item("concrete10.jpg", 1000, 640, "patios", "Patios", "Burnside Residence", href="gallery.html")}
-{gallery_item("concrete11.jpg", 700, 640, "pool-decks", "Pool Decks", "Beaumont Pool", href="gallery.html")}
-{gallery_item("concrete12.jpg", 700, 640, "decorative", "Decorative", "Glenelg Walkway", href="gallery.html")}
+{gallery_item("concrete9.jpg", 800, 1000, "driveways", "Driveways", "Belair Hills Driveway", href="gallery.html")}
+{gallery_item("concrete11.jpg", 1000, 640, "footpaths", "Footpaths", "Beaumont Footpath", href="gallery.html")}
+{gallery_item("concrete10.jpg", 700, 640, "shed-slabs", "Shed Slabs", "Burnside Shed Slab", href="gallery.html")}
+{gallery_item("concrete12.jpg", 700, 640, "driveways", "Driveways", "Glenelg Driveway", href="gallery.html")}
       </div>
       <div style="text-align:center; margin-top:52px;">
         <a href="gallery.html" class="btn btn-outline"><span>View the Full Gallery</span>{ARROW}</a>
@@ -310,7 +299,7 @@ index_body = f"""<main id="main">
         <div class="tm-track" id="tmTrack">
           <div class="tm-slide active">
             <div class="tm-stars" aria-hidden="true">★★★★★</div>
-            <p class="quote">"They replaced our entire driveway and back patio in one week. The stamped pattern looks like natural slate — neighbors keep asking who did it."</p>
+            <p class="quote">"They replaced our whole driveway and front footpath in a week. It looks like a completely different house — neighbours keep asking who did it."</p>
             <div class="tm-person">
               <span class="initials" aria-hidden="true">RM</span>
               <div class="who"><b>Rachel M.</b><span>Burnside, Adelaide</span></div>
@@ -318,18 +307,10 @@ index_body = f"""<main id="main">
           </div>
           <div class="tm-slide">
             <div class="tm-stars" aria-hidden="true">★★★★★</div>
-            <p class="quote">"Best bid, cleanest job site, and they finished a full day ahead of schedule. Our pool deck stays cool even in August."</p>
+            <p class="quote">"Best quote, cleanest job site, and they finished a day ahead of schedule. Our new shed slab is dead level and drains perfectly."</p>
             <div class="tm-person">
               <span class="initials" aria-hidden="true">DT</span>
               <div class="who"><b>Derek T.</b><span>Beaumont, Adelaide</span></div>
-            </div>
-          </div>
-          <div class="tm-slide">
-            <div class="tm-stars" aria-hidden="true">★★★★★</div>
-            <p class="quote">"As a builder I've used a lot of crews. St George Concrete Solutions is the only one I trust on foundations for custom homes."</p>
-            <div class="tm-person">
-              <span class="initials" aria-hidden="true">ML</span>
-              <div class="who"><b>Marcus L.</b><span>General Contractor, Adelaide</span></div>
             </div>
           </div>
         </div>
@@ -356,7 +337,7 @@ about_body = f"""<main id="main">
     <div class="container about-grid">
       <div class="about-media reveal-left">
         <div class="img-wrap">
-          {img("concrete2.jpg", 900, 1125, "About — crew finishing a stamped concrete slab", "St George Concrete Solutions crew hand-finishing a stamped slab")}
+          {img("concrete2.jpg", 900, 1125, "About — crew finishing a driveway pour", "St George Concrete Solutions crew hand-finishing a driveway pour")}
         </div>
         <div class="about-badge"><span>EST.</span><b>2009</b><span>SA</span></div>
       </div>
@@ -413,21 +394,7 @@ about_body = f"""<main id="main">
           <h4>Durability</h4>
           <p>Mix designs engineered specifically for Adelaide's heat cycles.</p>
         </div>
-        <div class="value-card reveal-scale d4">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <h4>Care</h4>
-          <p>We treat every yard, driveway and deadline like it's our own.</p>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="stats-band">
-    <div class="container stats-grid">
-      <div class="stat-card reveal"><div class="stat-num"><span class="count" data-target="15">0</span><span class="suffix">+</span></div><div class="stat-label">Years of excellence</div></div>
-      <div class="stat-card reveal d1"><div class="stat-num"><span class="count" data-target="812">0</span><span class="suffix">+</span></div><div class="stat-label">Projects delivered</div></div>
-      <div class="stat-card reveal d2"><div class="stat-num"><span class="count" data-target="22">0</span></div><div class="stat-label">Crew members</div></div>
-      <div class="stat-card reveal d3"><div class="stat-num"><span class="count" data-target="49" data-decimal="1">0</span><span class="suffix">★</span></div><div class="stat-label">Average client rating</div></div>
     </div>
   </section>
 
@@ -439,17 +406,14 @@ about_body = f"""<main id="main">
 # ---------------------------------------------------------------- SERVICES
 services_body = f"""<main id="main">
 
-{banner("Services", "Concrete services, <em>elevated.</em>", "Six specialties, one crew, zero shortcuts — from a backyard patio to a full commercial foundation.")}
+{banner("Services", "Concrete services, <em>elevated.</em>", "Footpaths, driveways and shed slabs — one crew, zero shortcuts, finished properly every time.")}
 
   <section class="section">
     <div class="container">
       <div class="services-grid">
-{service_card("concrete3.jpg", "Decorative", "Stamped &amp; Decorative", "Slate, cobblestone and wood-plank textures with hand-applied stains for a look no two patios share.", ["Custom stamp patterns &amp; borders", "Acid, water &amp; integral staining", "Sealed for UV &amp; traffic durability"], "contact.html", "Get a quote", "d1")}
-{service_card("concrete4.jpg", "Driveways", "Custom Driveways", "Exposed aggregate, broom-finish or stamped borders engineered for Adelaide's heat cycles.", ["Reinforced for vehicle load", "Control joints placed to prevent cracking", "Exposed aggregate &amp; broom finishes"], "contact.html", "Get a quote", "d2")}
-{service_card("concrete5.jpg", "Outdoor living", "Patios &amp; Outdoor Living", "Full outdoor rooms — fire features, seat walls and kitchens poured to match your home.", ["Fire pits, seat walls &amp; kitchens", "Multi-level &amp; curved layouts", "Matched to existing hardscape"], "contact.html", "Get a quote", "d3")}
-{service_card("concrete6.jpg", "Pool decks", "Pool Decks", "Cool-touch, slip-resistant knockdown finishes built for bare feet in July.", ["Cool-touch coatings &amp; light colors", "Slip-resistant knockdown texture", "Coping &amp; drainage detailing"], "contact.html", "Get a quote", "d1")}
-{service_card("concrete7.jpg", "Countertops", "Concrete Countertops", "Hand-cast, sealed and polished countertops — a one-of-a-kind centerpiece.", ["Hand-cast in our shop, custom molds", "Polished, honed or acid-etched finish", "Integrated sinks &amp; drainboards"], "contact.html", "Get a quote", "d2")}
-{service_card("concrete8.jpg", "Commercial", "Foundations &amp; Commercial", "Engineer-specified foundations, slabs and flatwork for builders and businesses.", ["Engineer-stamped footings &amp; slabs", "Commercial flatwork &amp; parking areas", "Body corporate &amp; builder coordination"], "contact.html", "Get a quote", "d3")}
+{service_card("concrete6.jpg", "Footpaths", "Footpaths &amp; Decorative", "Exposed aggregate, coloured oxide or plain broom-finish footpaths and crossovers, with decorative options when you want to lift the finish.", ["Exposed aggregate &amp; pebblecrete finishes", "Coloured &amp; oxide-through options", "Council-compliant crossovers &amp; paths"], "contact.html", "Get a quote", "d1")}
+{service_card("concrete4.jpg", "Driveways", "Driveways", "Exposed aggregate, broom-finish or coloured driveways, reinforced and engineered for Adelaide's heat cycles and reactive clay soils.", ["Reinforced for vehicle load", "Control joints placed to prevent cracking", "Exposed aggregate &amp; broom finishes"], "contact.html", "Get a quote", "d2")}
+{service_card("concrete10.jpg", "Shed Slabs", "Shed Slabs", "Reinforced, screeded-flat slabs for garden sheds, carports and storage — sized exactly to your kit and finished to last.", ["Sized to your shed or carport kit", "Reinforced mesh &amp; vapour barrier", "Screeded flat &amp; level"], "contact.html", "Get a quote", "d3")}
       </div>
     </div>
   </section>
@@ -494,27 +458,23 @@ services_body = f"""<main id="main">
 # ---------------------------------------------------------------- GALLERY
 gallery_body = f"""<main id="main">
 
-{banner("Gallery", "A portfolio worth <em>standing on.</em>", "Driveways, patios, pool decks and decorative work completed across Greater Adelaide. Tap any project to see it larger.")}
+{banner("Gallery", "A portfolio worth <em>standing on.</em>", "Footpaths, driveways and shed slabs completed across Greater Adelaide. Tap any project to see it larger.")}
 
   <section class="section">
     <div class="container">
       <div class="gallery-filters reveal" role="group" aria-label="Filter projects">
         <button class="filter-btn active" data-filter="all">All Work</button>
         <button class="filter-btn" data-filter="driveways">Driveways</button>
-        <button class="filter-btn" data-filter="patios">Patios</button>
-        <button class="filter-btn" data-filter="pool-decks">Pool Decks</button>
-        <button class="filter-btn" data-filter="decorative">Decorative</button>
-        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="footpaths">Footpaths</button>
+        <button class="filter-btn" data-filter="shed-slabs">Shed Slabs</button>
       </div>
       <div class="gallery-grid reveal" id="galleryGrid">
-{gallery_item("concrete9.jpg", 800, 1000, "driveways", "Driveways", "Belair Hills Estate", "tall")}
-{gallery_item("concrete10.jpg", 1000, 640, "patios", "Patios", "Burnside Residence", "wide")}
-{gallery_item("concrete11.jpg", 700, 640, "pool-decks", "Pool Decks", "Beaumont Pool")}
-{gallery_item("concrete12.jpg", 700, 640, "decorative", "Decorative", "Glenelg Walkway")}
-{gallery_item("concrete13.jpg", 800, 1000, "commercial", "Commercial", "Hindmarsh Plaza", "tall")}
-{gallery_item("concrete14.jpg", 1000, 640, "driveways", "Driveways", "Crafers Custom Home", "wide")}
-{gallery_item("concrete23.jpg", 700, 640, "pool-decks", "Pool Decks", "McLaren Vale Resort Home")}
-{gallery_item("concrete24.jpg", 700, 640, "decorative", "Decorative", "Norwood Kitchen Remodel")}
+{gallery_item("concrete9.jpg", 800, 1000, "driveways", "Driveways", "Belair Hills Driveway", "tall")}
+{gallery_item("concrete11.jpg", 1000, 640, "footpaths", "Footpaths", "Beaumont Footpath", "wide")}
+{gallery_item("concrete10.jpg", 700, 640, "shed-slabs", "Shed Slabs", "Burnside Shed Slab")}
+{gallery_item("concrete12.jpg", 700, 640, "driveways", "Driveways", "Glenelg Driveway")}
+{gallery_item("concrete14.jpg", 800, 1000, "footpaths", "Footpaths", "Crafers Footpath", "tall")}
+{gallery_item("concrete23.jpg", 1000, 640, "shed-slabs", "Shed Slabs", "McLaren Vale Shed Slab", "wide")}
       </div>
     </div>
   </section>
@@ -581,12 +541,9 @@ contact_body = f"""<main id="main">
                 <label for="fservice">Service needed</label>
                 <select id="fservice" name="service">
                   <option value="">Select a service</option>
-                  <option>Stamped &amp; Decorative Concrete</option>
-                  <option>Custom Driveways</option>
-                  <option>Patios &amp; Outdoor Living</option>
-                  <option>Pool Decks</option>
-                  <option>Concrete Countertops</option>
-                  <option>Foundations &amp; Commercial</option>
+                  <option>Footpaths &amp; Decorative</option>
+                  <option>Driveways</option>
+                  <option>Shed Slabs</option>
                 </select>
               </div>
             </div>
@@ -637,8 +594,8 @@ contact_body = f"""<main id="main">
       </div>
       <div class="faq-list reveal-right">
         <div class="faq-item open">
-          <button class="faq-q" type="button"><span>How much does concrete cost per square foot?</span><span class="faq-plus" aria-hidden="true"></span></button>
-          <div class="faq-a"><p>Basic broom-finish concrete typically runs $90–$130/m² installed, while stamped and decorative work runs $150–$260/m² depending on pattern, colour and site prep. Every quote includes a full line-item breakdown — no surprises.</p></div>
+          <button class="faq-q" type="button"><span>How much does concrete cost per square metre?</span><span class="faq-plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Basic broom-finish concrete typically runs $90–$130/m² installed, while decorative and exposed aggregate finishes run $150–$260/m² depending on finish, colour and site prep. Every quote includes a full line-item breakdown — no surprises.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" type="button"><span>How long does concrete take to cure?</span><span class="faq-plus" aria-hidden="true"></span></button>
@@ -649,12 +606,8 @@ contact_body = f"""<main id="main">
           <div class="faq-a"><p>Always. We'll walk your site, discuss finishes and provide a firm, written quote — usually within 48 hours — at no cost or obligation.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" type="button"><span>What's the difference between stamped and stained concrete?</span><span class="faq-plus" aria-hidden="true"></span></button>
-          <div class="faq-a"><p>Stamping presses a texture (stone, slate, wood) into wet concrete for a 3D pattern. Staining adds color and depth to the surface. Most premium projects combine both for a natural stone look.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button"><span>Do you work with body corporates and builders?</span><span class="faq-plus" aria-hidden="true"></span></button>
-          <div class="faq-a"><p>Yes — we regularly work directly with body corporates, architects and builders on new-build and community projects across Greater Adelaide, and handle all required documentation.</p></div>
+          <button class="faq-q" type="button"><span>What's the difference between broom-finish and exposed aggregate?</span><span class="faq-plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Broom finish is a plain, slip-resistant grey surface — the standard, budget-friendly option for driveways and footpaths. Exposed aggregate reveals the stone within the mix for a textured, decorative look, and colour or oxide can be added to either.</p></div>
         </div>
       </div>
     </div>
@@ -667,22 +620,22 @@ contact_body = f"""<main id="main">
 PAGES = {
     "index.html": {
         "title": "St George Concrete Solutions | Premium Concrete in Adelaide, SA",
-        "desc": "Adelaide's premier concrete design & installation company. Stamped concrete, driveways, patios, pool decks & more. Licensed, insured, 15+ years.",
+        "desc": "Adelaide's footpath, driveway and shed slab specialists. Licensed, insured, 15+ years of experience.",
         "active": "index", "body": index_body,
     },
     "about.html": {
         "title": "About Us | St George Concrete Solutions",
-        "desc": "15+ years of concrete craftsmanship in Adelaide. Meet the crew behind St George Concrete Solutions.",
+        "desc": "15+ years of concrete craftsmanship in Adelaide — footpaths, driveways and shed slabs, built to last.",
         "active": "about", "body": about_body,
     },
     "services.html": {
         "title": "Services | St George Concrete Solutions",
-        "desc": "Stamped concrete, driveways, patios, pool decks, countertops & foundations — Adelaide's premium concrete services.",
+        "desc": "Footpaths, driveways and shed slabs — Adelaide's concrete specialists.",
         "active": "services", "body": services_body,
     },
     "gallery.html": {
         "title": "Gallery | St George Concrete Solutions",
-        "desc": "Browse driveways, patios, pool decks, decorative and commercial concrete projects completed across Greater Adelaide, South Australia.",
+        "desc": "Browse footpath, driveway and shed slab projects completed across Greater Adelaide, South Australia.",
         "active": "gallery", "body": gallery_body,
     },
     "contact.html": {

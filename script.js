@@ -1,4 +1,4 @@
-/* ST. GEORGE CONCRETE — shared scripts */
+/* ST GEORGE CONCRETE SOLUTIONS — shared scripts */
 (function () {
   "use strict";
   const $ = (s, c) => (c || document).querySelector(s);
